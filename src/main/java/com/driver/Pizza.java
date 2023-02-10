@@ -5,10 +5,15 @@ public class Pizza {
     private int price;
     private Boolean isVeg;
     private String bill;
+    private int cheese = 0;
+    private int toppings = 0 ;
+    private int takeAway = 0;
+
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
-        // your code goes here
+        // your code goes here 
+        this.price = isVeg ? 300 : 400;
     }
 
     public int getPrice(){
@@ -16,19 +21,30 @@ public class Pizza {
     }
 
     public void addExtraCheese(){
-        // your code goes here
+        this.cheese = 80;
     }
 
     public void addExtraToppings(){
-        // your code goes here
+        this.price += ((this.isVeg) ? 70 : 120);
     }
 
     public void addTakeaway(){
-        // your code goes here
+        this.price += 20;
     }
 
     public String getBill(){
-        // your code goes here
+        this.bill = "Base price of pizza: "+this.price+"\n";
+                if(this.isCheeseAdded){
+            this.bill+="Extra Cheese Added: "+this.cheese+"\n";
+        }
+
+        if(this.toppings > 0){
+            this.bill+="Extra Toppings Added: "+this.toppings+"\n";
+        }
+        if(this.takeAway > 0){
+            this.bill+="Paperbag Added: "+this.takeAway+"\n";
+        }
+        this.bill+="Total price: "+(this.price + this.cheese + this.toppings + this.toppings)+"\n";
         return this.bill;
     }
 }
