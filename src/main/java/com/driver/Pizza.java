@@ -34,7 +34,7 @@ public class Pizza {
 
     public String getBill(){
         this.bill = "Base price of pizza: "+this.price+"\n";
-                if(this.isCheeseAdded){
+        if(this.cheese > 0){
             this.bill+="Extra Cheese Added: "+this.cheese+"\n";
         }
 
