@@ -25,11 +25,11 @@ public class Pizza {
     }
 
     public void addExtraToppings(){
-        this.price += ((this.isVeg) ? 70 : 120);
+        this.toppings += ((this.isVeg) ? 70 : 120);
     }
 
     public void addTakeaway(){
-        this.price += 20;
+        this.takeAway += 20;
     }
 
     public String getBill(){
