@@ -13,7 +13,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here 
-        this.price = isVeg ? 300 : 400;
+        this.price = (isVeg ? 300 : 400);
     }
 
     public int getPrice(){
@@ -37,7 +37,6 @@ public class Pizza {
         if(this.cheese > 0){
             this.bill+="Extra Cheese Added: "+this.cheese+"\n";
         }
-
         if(this.toppings > 0){
             this.bill+="Extra Toppings Added: "+this.toppings+"\n";
         }
