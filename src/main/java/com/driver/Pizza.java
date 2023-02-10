@@ -13,7 +13,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here 
-        this.price = (isVeg ? 390 : 500);
+        this.price = (isVeg ? 300 : 400);
     }
 
     public int getPrice(){
